@@ -391,7 +391,7 @@ def main(argv=None):
             "rich_text": [
               {
                 "text": {
-                  "content": data['description'][:2000]
+                  "content": data['description'][:2000] if 'relation_name' in data else ""
                   # notion api limit is 2k characters per rich text block
                 }
               }
